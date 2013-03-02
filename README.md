@@ -83,4 +83,4 @@ Template::renderTemplateWithContext('templateFile.php', $context);
 ```
 
 ## Summary
-These templates don't enforce any certain behavior, but they do provide a project structure that helps.
+These templates don't enforce any certain behavior, but they do provide a project structure that helps. Sample index file is included for your pleasure. Enjoy!

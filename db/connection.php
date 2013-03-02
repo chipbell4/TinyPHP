@@ -1,7 +1,6 @@
 <?php
-	require_once('/var/www/html/paste/config.php');
+	require_once(__DIR__ . '/../config.php');
 	require_once(DB . 'db_config.php');
-	// database connectivity
 
 	class DatabaseConnection
 	{
@@ -12,10 +11,10 @@
 			if(self::$conn == null)
 			{
 				global $DB;
-				$db_user = $DB['User'];
-				$db_pass = $DB['Pass'];
-				$db_name = $DB['Name'];
-				$db_host = $DB['Host'];
+				$db_user = $DB[User];
+				$db_pass = $DB[Pass];
+				$db_name = $DB[Name];
+				$db_host = $DB[Host];
 
 				self::$conn = new PDO("mysql:dbname=$db_name;host=$db_host", $db_user,
 					$db_pass, array(PDO::MYSQL_ATTR_FOUND_ROWS => true));

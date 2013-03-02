@@ -1,14 +1,15 @@
 <?php
 
-require_once('/var/www/html/paste/db/connection.php');
+require_once(__DIR__ . '/../config.php');
+require_once(DB .  'connection.php');
 
 class QueryManager
 {
-	private static $queryPath ='/var/www/html/paste/sql/';
+	private static $queryPath ='/sql/';
 
 	private static function loadQuery($filename)
 	{
-		return file_get_contents(self::$queryPath . $filename);
+		return file_get_contents(__DIR__ . self::$queryPath . $filename);
 	}
 
 	private static function executeQuery($filename, $obj=null)

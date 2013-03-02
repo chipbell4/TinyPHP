@@ -1,6 +1,6 @@
 <?php
 
-require_once('/var/www/html/paste/config.php');
+require_once(__DIR__ . '/../config.php');
 
 class Template
 {
